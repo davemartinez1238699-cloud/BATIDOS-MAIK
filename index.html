@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batidos Maik · Menú digital</title>
+  <meta name="description" content="Menú digital de Batidos Maik: batidos, bowls y snacks frescos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#inicio" aria-label="Batidos Maik inicio"><span>batidos</span> maik<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#menu">Menú</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-button" id="openCart" aria-label="Abrir carrito">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Fresco · Natural · Delicioso</p>
+        <h1>Lo bueno de la vida,<br /><em>en un vaso.</em></h1>
+        <p class="hero-text">Batidos hechos al momento con fruta real, ingredientes de calidad y mucho sabor. Tu pausa favorita empieza aquí.</p>
+        <a class="primary-button" href="#menu">Ver el menú <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-label="Batido de fresa de Batidos Maik">
+        <div class="hero-photo"><img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=900&q=88" alt="Batido de frutos rojos servido en vaso" /></div>
+        <div class="hero-badge"><strong>4.9</strong><span>★★★★★<br />favorito de la casa</span></div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><div><p class="eyebrow">Elige tu momento</p><h2>Nuestro menú</h2></div><div class="search-wrap">⌕<input id="search" type="search" placeholder="Buscar en el menú..." aria-label="Buscar productos" /></div></div>
+      <div class="categories" role="tablist"><button class="category active" data-category="todos">Todo</button><button class="category" data-category="batidos">Batidos</button><button class="category" data-category="bowls">Bowls</button><button class="category" data-category="snacks">Snacks</button></div>
+      <div class="product-grid" id="products"></div>
+    </section>
+
+    <section class="story" id="nosotros"><div class="story-icon">🥭</div><div><p class="eyebrow">Hecho con cariño</p><h2>De la fruta a tu sonrisa.</h2><p>Seleccionamos ingredientes frescos y los mezclamos al momento. Sin complicaciones, sin atajos, solo cosas ricas.</p></div><div class="stat"><strong>100%</strong><span>fruta real</span></div></section>
+    <section class="contact" id="contacto"><p class="eyebrow">¿Nos visitas?</p><h2>Tu próximo favorito<br /><em>te está esperando.</em></h2><p>📍 Calle del Sabor, 24 · 📞 600 123 456</p><a class="primary-button" href="https://wa.me/34600123456" target="_blank" rel="noreferrer">Pedir por WhatsApp <span>↗</span></a></section>
+  </main>
+
+  <aside class="cart" id="cart" aria-label="Carrito de compra"><div class="cart-head"><div><p class="eyebrow">Recogida en tienda</p><h2>Tu pedido</h2></div><button id="closeCart" aria-label="Cerrar carrito">×</button></div><div id="cartItems" class="cart-items"><p class="empty">Tu carrito está vacío.<br />¡Añade algo rico!</p></div><div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">0,00 €</strong></div><small>Impuestos incluidos · listo en 10–15 min</small><button class="primary-button checkout" id="checkout">Continuar con el pedido <span>→</span></button></div></aside><div class="overlay" id="overlay"></div>
+  <footer><a class="logo" href="#inicio"><span>batidos</span> maik<span class="dot">.</span></a><p>© 2024 Batidos Maik · Hecho para disfrutar</p><div>Instagram&nbsp; · &nbsp;TikTok</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
